@@ -3,12 +3,12 @@ import streamlit as st
 
 def anagram_this(string_to_anagram, search_for):
     string_copy = list(string_to_anagram)
-    wehave = []
+    wehave = {}
     for l in search_for:
         if l != ' ':
-            wehave.append(string_copy.count(l))
+            wehave[l] = (string_copy.count(l))
 
-    return min(wehave)
+    return min(wehave.values())
 
 
 def adjective(x):
@@ -24,11 +24,11 @@ def adjective(x):
         return 'BEN (cazzo fai Ben, adirittura 100!?)'
 
 
-st.title('Analgram!')
-st.write('Fottuto idiota, benvenuto')
+st.title(':red[A]:blue[n]:green[a]:violet[l]:orange[g]:gray[r]:red[a]:green[m]:rainbow[!!]')
+st.write('Fottuto idiota, benvenuto, da notare come in ANALGRAM ci sia un A.M. famossissima :blue[vocale]')
 # st.write('e adesso che cazzo si fa, mi mette una nota?')
 stringa_to = st.text_area('il testo in cui cercare')
-search = st.text_input('Che cerco??')
+search = st.text_input('Che cerco?? (se metti una lettera sola sbaglia perché fa schifo)')
 if 'dio' in search:
     st.write('sempre con quel cazzo di dio')
 elif 'gesù' in search:
@@ -39,4 +39,4 @@ elif 'madonna' in search:
 if search:
     result = anagram_this(stringa_to, search)
 
-    st.subheader(f'Ci sono {adjective(result)} {result} nel testo che hai messo')
+    st.subheader(f'Ci sono {adjective(result)} :blue[{result}] nel testo che hai messo')
