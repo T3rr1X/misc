@@ -3,12 +3,12 @@ import streamlit as st
 
 def anagram_this(string_to_anagram, search_for):
     string_copy = list(string_to_anagram)
-    wehave = {}
+    wehave = []
     for l in search_for:
         if l != ' ':
-            wehave[l] = wehave.get(l, 0) + string_copy.count(l)
+            wehave.append(string_copy.count(l))
 
-    return min(wehave.values())
+    return min(wehave)
 
 
 def adjective(x):
@@ -22,6 +22,7 @@ def adjective(x):
         return 'ben'
     elif x >= 100:
         return 'BEN (cazzo fai Ben, adirittura 100!?)'
+
 
 st.title('Analgram!')
 st.write('Fottuto idiota, benvenuto')
@@ -37,6 +38,5 @@ elif 'madonna' in search:
 
 if search:
     result = anagram_this(stringa_to, search)
-
 
     st.subheader(f'Ci sono {adjective(result)} {result} nel testo che hai messo')
