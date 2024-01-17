@@ -23,7 +23,7 @@ def adjective(x):
     elif x >= 100:
         return 'BEN (cazzo fai Ben, adirittura 100!?)'
 
-st.title('Analgram!')
+st.title(':red[A]:blue[n]green[a]:yellow[l]:magenta[g]:blue[r]:red[a]:green[m]:yellow[!]')
 st.write('Fottuto idiota, benvenuto')
 # st.write('e adesso che cazzo si fa, mi mette una nota?')
 stringa_to = st.text_area('il testo in cui cercare')
