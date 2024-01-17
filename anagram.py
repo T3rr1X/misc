@@ -2,13 +2,13 @@ import streamlit as st
 
 
 def anagram_this(string_to_anagram, search_for):
-    string_copy = list(set(list(string_to_anagram)))
-    wehave = []
+    string_copy = list(string_to_anagram)
+    wehave = {}
     for l in search_for:
         if l != ' ':
-            wehave.append(string_copy.count(l))
+            wehave[l] = string_copy.count(l)
 
-    return min(wehave)
+    return min(wehave.values())
 
 
 def adjective(x):
