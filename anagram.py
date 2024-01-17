@@ -37,6 +37,6 @@ elif 'madonna' in search:
 
 if search:
     result = anagram_this(stringa_to, search)
-    
-    
-    st.subheader(f'Ci sono {adjective(result)} nel testo che hai messo')
+
+
+    st.subheader(f'Ci sono {adjective(result)} {result} nel testo che hai messo')
