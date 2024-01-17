@@ -2,7 +2,7 @@ import streamlit as st
 
 
 def anagram_this(string_to_anagram, search_for):
-    string_copy = list(string_to_anagram)
+    string_copy = set(list(string_to_anagram))
     wehave = []
     for l in search_for:
         if l != ' ':
