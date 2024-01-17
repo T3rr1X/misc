@@ -2,7 +2,7 @@ import streamlit as st
 
 
 def anagram_this(string_to_anagram, search_for):
-    string_copy = set(list(string_to_anagram))
+    string_copy = list(set(list(string_to_anagram)))
     wehave = []
     for l in search_for:
         if l != ' ':
@@ -23,7 +23,7 @@ def adjective(x):
     elif x >= 100:
         return 'BEN (cazzo fai Ben, adirittura 100!?)'
 
-st.title(':red[A]:blue[n]green[a]:yellow[l]:magenta[g]:blue[r]:red[a]:green[m]:yellow[!]')
+st.title('Analgram!')
 st.write('Fottuto idiota, benvenuto')
 # st.write('e adesso che cazzo si fa, mi mette una nota?')
 stringa_to = st.text_area('il testo in cui cercare')
