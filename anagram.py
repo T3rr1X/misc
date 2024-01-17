@@ -34,7 +34,9 @@ elif 'gesù' in search:
     st.write('palese cazzo')
 elif 'madonna' in search:
     st.write('scontatissima')
-result = anagram_this(stringa_to, search)
 
-
-st.subheader(f'Ci sono {adjective(result)} nel testo che hai messo')
+if search:
+    result = anagram_this(stringa_to, search)
+    
+    
+    st.subheader(f'Ci sono {adjective(result)} nel testo che hai messo')
