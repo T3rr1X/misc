@@ -11,20 +11,6 @@ def anagram_this(string_to_anagram, search_for):
     return min(wehave)
 
 
-st.title('Analgram!')
-st.write('Fottuto idiota, benvenuto')
-st.write('e adesso che cazzo si fa, mi mette una nota?')
-stringa_to = st.text_area('il testo in cui cercare')
-search = st.text_input('Che cerco??')
-if 'dio' in search:
-    st.write('sempre con quel cazzo di dio')
-elif 'gesù' in search:
-    st.write('palese cazzo')
-elif 'madonna':
-    st.write('scontatissima')
-result = anagram_this(stringa_to, search)
-
-
 def adjective(x):
     if x >= 0:
         return ''
@@ -36,6 +22,19 @@ def adjective(x):
         return 'ben'
     elif x >= 100:
         return 'BEN (cazzo fai Ben, adirittura 100!?)'
+
+st.title('Analgram!')
+st.write('Fottuto idiota, benvenuto')
+# st.write('e adesso che cazzo si fa, mi mette una nota?')
+stringa_to = st.text_area('il testo in cui cercare')
+search = st.text_input('Che cerco??')
+if 'dio' in search:
+    st.write('sempre con quel cazzo di dio')
+elif 'gesù' in search:
+    st.write('palese cazzo')
+elif 'madonna' in search:
+    st.write('scontatissima')
+result = anagram_this(stringa_to, search)
 
 
 st.subheader(f'Ci sono {adjective(result)} nel testo che hai messo')
