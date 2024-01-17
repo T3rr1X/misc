@@ -1,5 +1,15 @@
-from AnagramThis import anagram_this
 import streamlit as st
+
+
+def anagram_this(string_to_anagram, search_for):
+    string_copy = list(string_to_anagram)
+    wehave = []
+    for l in search_for:
+        if l != ' ':
+            wehave.append(string_copy.count(l))
+
+    return min(wehave)
+
 
 st.title('Analgram!')
 st.write('Fottuto idiota, benvenuto')
