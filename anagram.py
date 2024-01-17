@@ -6,7 +6,7 @@ def anagram_this(string_to_anagram, search_for):
     wehave = {}
     for l in search_for:
         if l != ' ':
-            wehave[l] = string_copy.count(l)
+            wehave[l] += string_copy.count(l)
 
     return min(wehave.values())
 
