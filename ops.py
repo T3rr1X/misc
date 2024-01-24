@@ -20,7 +20,7 @@ def generate_key(key: str):
     elif '*' in key:
         key2 = key
         key = key2.replace(' ', '').split('*')[0]
-        multiplier = key2.replace(' ', '').split('*')[1]
+        multiplier = int(key2.replace(' ', '').split('*')[1])
     if False in [True if k in LETTERS else False for k in key]:
         raise ValueError('one or more charachter in key is not parsable')
     return [LETTERS.index(k * multiplier) for k in key]
