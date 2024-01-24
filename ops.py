@@ -23,7 +23,7 @@ def generate_key(key: str):
         multiplier = int(key2.replace(' ', '').split('*')[1])
     if False in [True if k in LETTERS else False for k in key]:
         raise ValueError('one or more charachter in key is not parsable')
-    return [LETTERS.index(k * multiplier) for k in key]
+    return [LETTERS.index(k) * multiplier for k in key]
 
 
 def derivate_key(str1: str, str2: str):
