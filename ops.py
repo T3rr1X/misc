@@ -172,7 +172,7 @@ def corrier_to_streamlit():
         IN = text.replace(', ', ',').replace(',', ' ').split()
         IN = [int(n) for n in IN]
         packs = tuple(create_bituple_fromlist(IN, prefisso))
-        res = maximize(packs, portata=portata, post=3)
+        res = maximize(packs, portata=portata, post=posti)
         st.subheader(f"Il valore massimo ottenibile è :blue[{res[1]}] ottenuto con :red[{res[0]}]")
 
 
